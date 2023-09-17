@@ -1,5 +1,7 @@
 using System;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography.X509Certificates;
+using System.Text;
 
 class Program
 {
@@ -11,6 +13,7 @@ class Program
         int number = int.Parse(finalResult);
 
         string letter = " ";
+       
 
         if (number >= 90)
         {
@@ -33,15 +36,32 @@ class Program
             letter = "F";
         }
 
-        Console.WriteLine($"Your grade is: {letter}");
+        //Console.WriteLine($"Your grade is: {letter}");
 
+    
+        float lastDigit = number % 10;
+        string plus = " + ";
+        string minus = "-";
+       
+           if (lastDigit >=7 && letter == "B"){
+               Console.WriteLine($"Your grade is: {letter} {plus}");
+            }
+           else if (lastDigit < 3 && letter == "A"){
+            Console.WriteLine($"Your grade is: {letter} {minus}");
+
+            }
+           else 
+           {
+              Console.WriteLine($"Your grade is: {letter}");
+            } 
         if (number >= 70 )
         {
             Console.WriteLine("You passed the course!");
         }
         else {
             Console.WriteLine("You can do it better next time!");
-        }
+        } 
+          
 
     }
 }

@@ -14,7 +14,7 @@ class Program
 
             Console.Write("Enter a number: ");
             rule = int.Parse(Console.ReadLine());
-            numbers.Add(rule);
+            numbers.Add(rule);//add elements to the list.
            // foreach(int other in numbers){
                 //Console.WriteLine(other);
             //}

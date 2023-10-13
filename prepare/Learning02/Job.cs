@@ -13,7 +13,7 @@ public class Job
 
     public void DisplayInfo()
     {
-        Console.WriteLine($"{_jobTitle}");
+        Console.WriteLine($"{_jobTitle} ({_companyName}) {_startYear} - {_endYear}");
     }
    
 }
